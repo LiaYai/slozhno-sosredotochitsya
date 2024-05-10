@@ -1,5 +1,231 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
+}
+
+.header {
+  position: relative;
+  block-size: 100vh;
+  display: grid;
+  grid-template-rows: 0 1fr min-content 1fr 0;
+  padding: min(2.67vw, 20px);
+}
+
+.decorated-span {
+  position: absolute;
+  right: calc(min(2.67vw, 20px) + 28px);
+  top: min(2.67vw, 20px);
+  line-height: calc(25 / 18);
+  color: var(--accent-color);
+}
+
+.decorated-span::after {
+  position: absolute;
+  top: 8px;
+  right: -19px;
+  content:'';
+  inline-size: 9px; 
+  block-size: 9px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+}
+
+.decorated-zone::before {
+  content: '';
+  inline-size: 25px;
+  block-size: 25px;
+  justify-self: end;
+  align-self: start;
+  border-block-start: 1px solid var(--accent-color);
+  border-inline-end: 1px solid var(--accent-color);
+}
+
+.decorated-zone::after {
+  content: '';
+  inline-size: 25px;
+  block-size: 25px;
+  justify-self: start;
+  align-self: end;
+  border-block-end: 1px solid var(--accent-color);
+  border-inline-start: 1px solid var(--accent-color);
+}
+
+.header__theme-menu {
+  align-self: center;
+  justify-self: end;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (width >= 1024px) {
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  line-height: 1;
+  text-transform: lowercase;
+  background-color: transparent;
+  padding: 2px 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid currentColor;
+  opacity: 0.4;
+}
+
+.header__theme-menu-button:focus {
+  border-block-end: 1px solid currentColor;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__title {
+  position: relative;
+  left: max(-2.67vw, -20px); /* вычитаю значение padding, отрицательные числа, поэтому max, а не min */
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.83;
+  text-shadow: 4px 4px 0 var(--title-shadow);
+}
+
+@media (width >= 768px) {
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.title-decor {
+  color: var(--bg-color);
+  background-color: var(--accent-color);
+  font-size: 18px;
+  line-height: calc(23.4 / 18);
+}
+
+.header__text {
+  inline-size: max(calc(375px - 20px), calc(100% / 2));
+  justify-self: end;
+  align-self: center;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+a:hover {
+  border-block-end: 1px solid currentColor;
+}
+
+a:focus {
+  outline: 1px solid currentColor;
+}
+
+main {
+  padding: min(10.67vw, 60px) min(2.67vw, 20px);
+}
+
+section:not(:last-of-type) {
+  margin-block-end: clamp(50px, 21.374px + 7.6336vw, 80px);
+}
+
+.section__title {
+  color: var(--accent-color);
+  font-size: inherit; 
+  margin-block-end: 20px;
+}
+
+.article-title {
+  margin-block-end: 10px;
+} 
+
+.section__how .article-title {
+  font-weight: normal;
+}
+
+.section__subtitle {
+  margin-block-end: 20px;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+.section__why, .section__how {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 20px;
+}
+
+@media (width >= 768px) {
+
+  .section__what .section__title {
+    inline-size: calc(100% / 3);
+  }
+
+  .section__why, .section__how {
+    grid-template-columns: calc(100% / 3) auto;
+  }
+}
+
+@media (width >= 1024px) {
+
+  .section__what .article-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__img {
+  inline-size: 100%;
+}
+
+.gallery {
+  inline-size: 100%;
+  display: grid;
+  padding-block-start: min(2.67vw, 20px);
+  gap: min(2.67vw, 20px);
+  /* grid-template-rows: 100% / 3 * 2, 100% / 3;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: dense;
+  gap: 20px; */
+}
+
+.footer {
+  padding: min(2.67vw, 20px);
+  display: grid;
+  block-size: 100vh;
+}
+
+.footer__title {
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--title-shadow);
 }
