@@ -48,3 +48,8 @@ button,
 a:focus-visible {
   outline: none;
 }
+
+button,
+a:focus {
+  outline: none;
+}
