@@ -29,8 +29,8 @@
   position: absolute;
   top: 8px;
   right: -19px;
-  content:'';
-  inline-size: 9px; 
+  content: '';
+  inline-size: 9px;
   block-size: 9px;
   background-color: var(--accent-color);
   border-radius: 50%;
@@ -105,8 +105,6 @@
 }
 
 .header__title {
-  position: relative;
-  left: max(-2.67vw, -20px); /* вычитаю значение padding, отрицательные числа, поэтому max, а не min */
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
@@ -116,7 +114,9 @@
 @media (width >= 768px) {
 
   .header__title {
+    position: relative;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    left: -20px;
   }
 }
 
@@ -157,13 +157,13 @@ section:not(:last-of-type) {
 
 .section__title {
   color: var(--accent-color);
-  font-size: inherit; 
+  font-size: inherit;
   margin-block-end: 20px;
 }
 
 .article-title {
   margin-block-end: 10px;
-} 
+}
 
 .section__how .article-title {
   font-weight: normal;
@@ -179,10 +179,10 @@ section:not(:last-of-type) {
   gap: 20px;
 }
 
-.section__why, .section__how {
+.section__why,
+.section__how {
   display: grid;
   grid-template-columns: auto;
-  gap: 20px;
 }
 
 @media (width >= 768px) {
@@ -191,8 +191,10 @@ section:not(:last-of-type) {
     inline-size: calc(100% / 3);
   }
 
-  .section__why, .section__how {
+  .section__why,
+  .section__how {
     grid-template-columns: calc(100% / 3) auto;
+    gap: 20px;
   }
 }
 

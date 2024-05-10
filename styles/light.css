@@ -4,15 +4,15 @@
   переключая тему
 */
 
-:root .theme_light{
+:root .theme_light {
   --text-color: #353430;
-  --accent-color: #FF8DCB;
-  --title-color: #FFC2E6; 
-  --title-shadow: #FF0070;  
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --title-shadow: #ff0070;
 }
 
 .page.theme_light {
-  background-image: url(../images/cover-image-light.png); 
+  background-image: url(../images/cover-image-light.png);
   color: var(--text-color);
 }
 
@@ -34,7 +34,7 @@
   color: var(--text-color);
 }
 
-.theme_light .header__title  {
+.theme_light .header__title {
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--title-shadow);
 }
@@ -57,13 +57,13 @@ a.theme_light {
   :root {
     --text-color: #353430;
     --bg-color: #353430;
-    --accent-color: #FF8DCB;
-    --title-color: #FFC2E6; 
-    --title-shadow: #FF0070;   
+    --accent-color: #ff8dcb;
+    --title-color: #ffc2e6;
+    --title-shadow: #ff0070;
   }
 
   .page {
-    background-image: url(../images/cover-image-light.png); 
+    background-image: url(../images/cover-image-light.png);
     color: var(--text-color);
   }
 
@@ -73,14 +73,14 @@ a.theme_light {
 
   .decorated-span::after {
     background-color: transparent;
-    box-shadow:none;
+    box-shadow: none;
   }
 
   .decorated-zone::before {
     border-block-start: 1px solid var(--text-color);
     border-inline-end: 1px solid var(--text-color);
   }
-  
+
   .decorated-zone::after {
     border-block-end: 1px solid var(--text-color);
     border-inline-start: 1px solid var(--text-color);
@@ -107,6 +107,4 @@ a.theme_light {
   .section__title {
     color: var(--text-color);
   }
-} 
-
-
+}
