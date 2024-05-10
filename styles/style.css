@@ -194,7 +194,7 @@ section:not(:last-of-type) {
   .section__why,
   .section__how {
     grid-template-columns: calc((100% - 40px) / 3) auto;
-    gap: 20px;
+    gap: 26px;
   }
 }
 
