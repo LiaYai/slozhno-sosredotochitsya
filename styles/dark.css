@@ -13,6 +13,7 @@
 
 .page.theme_dark {
   background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 

@@ -8,10 +8,12 @@
   --text-color: #353430;
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
+  --bg-color: #fff1f7;
 }
 
 .page.theme_light {
   background-image: url(../images/cover-image-light.png);
+  background-color: var(--bg-color);
   color: var(--text-color);
 }
 
@@ -68,6 +70,7 @@ a.theme_light {
 
   .page {
     background-image: url(../images/cover-image-light.png);
+    background-color: var(--bg-color);
     color: var(--text-color);
   }
 
@@ -97,7 +100,7 @@ a.theme_light {
   .heading {
     color: var(--title-color);
   }
-  
+
   .header__title {
     text-shadow: 4px 4px 0 var(--accent-color);
   }

@@ -2,6 +2,7 @@
 
 .page {
   background-image: url(../images/cover-image-dark.png);
+  background-color: var(--bg-color);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
