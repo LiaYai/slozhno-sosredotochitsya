@@ -108,7 +108,7 @@
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
-  text-shadow: 4px 4px 0 var(--title-shadow);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
@@ -188,12 +188,12 @@ section:not(:last-of-type) {
 @media (width >= 768px) {
 
   .section__what .section__title {
-    inline-size: calc(100% / 3);
+    inline-size: calc((100% - 60px) / 3);
   }
 
   .section__why,
   .section__how {
-    grid-template-columns: calc(100% / 3) auto;
+    grid-template-columns: calc((100% - 60px) / 3) auto;
     gap: 20px;
   }
 }
@@ -229,5 +229,5 @@ section:not(:last-of-type) {
 .footer__title {
   justify-self: center;
   align-self: center;
-  text-shadow: 2px 2px 0 var(--title-shadow);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }

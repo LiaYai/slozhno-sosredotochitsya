@@ -9,7 +9,6 @@
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
   --title-color: #db00ff;
-  --title-shadow: #ff0070;
 }
 
 .page.theme_dark {
@@ -42,7 +41,7 @@
 
 .theme_dark .header__title {
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--title-shadow);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 .theme_dark .title-decor {
@@ -56,4 +55,8 @@
 
 .theme_dark .section__title {
   color: var(--accent-color);
+}
+
+.theme_dark .footer__title {
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
