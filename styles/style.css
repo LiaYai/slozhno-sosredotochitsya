@@ -188,12 +188,12 @@ section:not(:last-of-type) {
 @media (width >= 768px) {
 
   .section__what .section__title {
-    inline-size: calc((100% - 60px) / 3);
+    inline-size: calc((100% - 40px) / 3);
   }
 
   .section__why,
   .section__how {
-    grid-template-columns: calc((100% - 60px) / 3) auto;
+    grid-template-columns: calc((100% - 40px) / 3) auto;
     gap: 20px;
   }
 }
