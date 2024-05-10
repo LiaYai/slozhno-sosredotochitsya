@@ -21,6 +21,10 @@
   display: none;
 }
 
+.theme_light .decorated-span::after {
+  display: none;
+}
+
 .theme_light .decorated-zone::before {
   border-block-start: 1px solid var(--text-color);
   border-inline-end: 1px solid var(--text-color);
@@ -76,7 +80,7 @@ a.theme_light {
   }
 
   .decorated-span {
-    color: transparent;
+    color: transparent; /* если использую display: none; то, когда тема prefer - светлая, этот элемент больше не появляется при переключении на темную тему*/
   }
 
   .decorated-span::after {
