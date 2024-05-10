@@ -203,6 +203,12 @@ section:not(:last-of-type) {
   .section__what .article-list {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .section__why,
+  .section__how {
+    grid-template-columns: calc((100% - 40px) / 3) auto;
+    gap: 20px;
+  }
 }
 
 .gallery__img {
