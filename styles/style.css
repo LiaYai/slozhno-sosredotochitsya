@@ -104,18 +104,24 @@
   pointer-events: none;
 }
 
-.header__title {
+.heading {
   color: var(--title-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.83;
+}
+
+.header__title {
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (width >= 768px) {
 
+  .heading {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   .header__title {
     position: relative;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     left: -20px;
   }
 }

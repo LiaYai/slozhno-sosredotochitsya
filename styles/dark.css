@@ -39,8 +39,11 @@
   color: var(--accent-color);
 }
 
-.theme_dark .header__title {
+.theme_dark .heading {
   color: var(--title-color);
+}
+
+.theme_dark .header__title {
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
