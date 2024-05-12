@@ -1,66 +1,24 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root .theme_dark {
   --bg-color: #000028;
+  --title-color: #db00ff;
   --text-color: #f1b2ce;
   --accent-color: #ff0070;
-  --title-color: #db00ff;
+  --decor-color: var(--accent-color);
+  --title-decor-color: var(--bg-color);
+  --sectinon-title-color: var(--accent-color);
+  --button-color: var(--accent-color);
+  --button-border-color: #ff007066;
 }
 
 .page.theme_dark {
   background-image: url(../images/cover-image-dark.png);
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 .theme_dark .decorated-span {
-  color: var(--accent-color);
+  color: var(--decor-color);
 }
 
 .theme_dark .decorated-span::after {
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
-}
-
-.theme_dark .decorated-zone::before {
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
-}
-
-.theme_dark .decorated-zone::after {
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
-}
-
-.theme_dark .header__theme-menu-button {
-  color: var(--accent-color);
-}
-
-.theme_dark .heading {
-  color: var(--title-color);
-}
-
-.theme_dark .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.theme_dark .title-decor {
-  color: var(--bg-color);
-  background-color: var(--accent-color);
-}
-
-.theme_dark a {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.theme_dark .section__title {
-  color: var(--accent-color);
-}
-
-.theme_dark .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
+  background-color: var(--decor-color);
+  box-shadow: 0 0 4px 2px var(--decor-color);
 }

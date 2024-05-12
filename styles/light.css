@@ -1,129 +1,47 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root .theme_light {
+  --bg-color: #fff1f7;
+  --title-color: #ffc2e6;
   --text-color: #353430;
   --accent-color: #ff8dcb;
-  --title-color: #ffc2e6;
-  --bg-color: #fff1f7;
+  --decor-color: var(--text-color);
+  --title-decor-color: var(--text-color);
+  --sectinon-title-color: var(--text-color);
+  --button-color: var(--text-color);
+  --button-border-color: #32312d66;
 }
 
 .page.theme_light {
   background-image: url(../images/cover-image-light.png);
-  background-color: var(--bg-color);
-  color: var(--text-color);
 }
 
 .theme_light .decorated-span {
   display: none;
 }
 
-.theme_light .decorated-span::after {
-  display: none;
-}
-
-.theme_light .decorated-zone::before {
-  border-block-start: 1px solid var(--text-color);
-  border-inline-end: 1px solid var(--text-color);
-}
-
-.theme_light .decorated-zone::after {
-  border-block-end: 1px solid var(--text-color);
-  border-inline-start: 1px solid var(--text-color);
-}
-
-.theme_light .header__theme-menu-button {
-  color: var(--text-color);
-}
-
-.theme_light .heading {
-  color: var(--title-color);
-}
-
-.theme_light .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.theme_light .title-decor {
-  color: var(--text-color);
-  background-color: var(--accent-color);
-}
-
-a.theme_light {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.theme_light .section__title {
-  color: var(--text-color);
-}
-
-.theme_light .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
 @media (prefers-color-scheme: light) {
 
   :root {
+    --bg-color: #fff1f7;
+    --title-color: #ffc2e6;
     --text-color: #353430;
     --accent-color: #ff8dcb;
-    --title-color: #ffc2e6;
-    --bg-color: #fff1f7;
+    --decor-color: var(--text-color);
+    --title-decor-color: var(--text-color);
+    --sectinon-title-color: var(--text-color);
+    --button-color: var(--text-color);
+    --button-border-color: #32312d66;
   }
 
   .page {
     background-image: url(../images/cover-image-light.png);
-    background-color: var(--bg-color);
-    color: var(--text-color);
   }
 
   .decorated-span {
-    color: transparent; /* если использую display: none; то, когда тема prefer - светлая, этот элемент больше не появляется при переключении на темную тему*/
+    color: transparent; /* если использую display: none; то, когда тема prefers - светлая, этот элемент больше не появляется при переключении на темную тему */
   }
 
   .decorated-span::after {
     background-color: transparent;
-    box-shadow: none;
-  }
-
-  .decorated-zone::before {
-    border-block-start: 1px solid var(--text-color);
-    border-inline-end: 1px solid var(--text-color);
-  }
-
-  .decorated-zone::after {
-    border-block-end: 1px solid var(--text-color);
-    border-inline-start: 1px solid var(--text-color);
-  }
-
-  .header__theme-menu-button {
-    color: var(--text-color);
-  }
-
-  .heading {
-    color: var(--title-color);
-  }
-
-  .header__title {
-    text-shadow: 4px 4px 0 var(--accent-color);
-  }
-
-  .title-decor {
-    color: var(--text-color);
-    background-color: var(--accent-color);
-  }
-
-  a {
-    text-shadow: 2px 2px 0 var(--accent-color);
-  }
-
-  .section__title {
-    color: var(--text-color);
-  }
-
-  .footer__title {
-    text-shadow: 2px 2px 0 var(--accent-color);
+    box-shadow: 0 0 4px 2px transparent;
   }
 }
