@@ -184,7 +184,7 @@ a:focus {
   outline: 1px solid currentColor;
 }
 
-.section-how .article-title {
+.section-how .article__title {
   font-weight: normal;
 }
 
