@@ -38,11 +38,11 @@
 
   .decorated-span {
     visibility: hidden;
-    color: transparent; 
-  } 
+    color: transparent;
+  }
 
   .decorated-span::after {
     background-color: transparent;
     box-shadow: 0 0 4px 2px transparent;
-  } 
+  }
 }
