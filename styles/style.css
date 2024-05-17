@@ -14,7 +14,7 @@
   position: relative;
   min-block-size: 100vh;
   display: grid;
-  grid-template-rows: 0 1fr min-content 1fr 0;
+  grid-template-rows: 1fr min-content 1fr;
   padding: min(2.67vw, 20px);
 }
 
@@ -40,21 +40,23 @@
 }
 
 .decorated-zone::before {
+  position: absolute;
+  right: min(2.67vw, 20px);
+  top: min(2.67vw, 20px);
   content: '';
   inline-size: 25px;
   block-size: 25px;
-  justify-self: end;
-  align-self: start;
   border-block-start: 1px solid var(--decor-color);
   border-inline-end: 1px solid var(--decor-color);
 }
 
 .decorated-zone::after {
+  position: absolute;
+  left: min(2.67vw, 20px);
+  bottom: min(2.67vw, 20px);
   content: '';
   inline-size: 25px;
   block-size: 25px;
-  justify-self: start;
-  align-self: end;
   border-block-end: 1px solid var(--decor-color);
   border-inline-start: 1px solid var(--decor-color);
 }
@@ -282,6 +284,7 @@ a:focus {
 }
 
 .footer {
+  position: relative;
   padding: min(2.67vw, 20px);
   display: grid;
   min-block-size: 100vh;

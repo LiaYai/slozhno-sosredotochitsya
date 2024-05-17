@@ -1,4 +1,4 @@
-:root .theme_light {
+:root.theme-light {
   --bg-color: #fff1f7;
   --title-color: #ffc2e6;
   --text-color: #353430;
@@ -37,11 +37,12 @@
   }
 
   .decorated-span {
-    color: transparent; /* если использую display: none; то, когда тема prefers - светлая, этот элемент больше не появляется при переключении на темную тему */
-  }
+    visibility: hidden;
+    color: transparent; 
+  } 
 
   .decorated-span::after {
     background-color: transparent;
     box-shadow: 0 0 4px 2px transparent;
-  }
+  } 
 }
