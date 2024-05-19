@@ -208,7 +208,7 @@ a:focus {
 
   .section-why,
   .section-how {
-    grid-template-columns: 1fr 2fr ;
+    grid-template-columns: calc((100% - 40px) / 3) auto;
     gap: 26px;
   }
 }
@@ -221,7 +221,7 @@ a:focus {
 
   .section-why,
   .section-how {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: calc((100% - 40px) / 3) auto;
     gap: 20px;
   }
 }
