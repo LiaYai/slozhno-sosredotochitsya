@@ -14,7 +14,7 @@
   background-image: url(../images/cover-image-light.png);
 }
 
-.theme_light .decorated-span {
+.theme_light .decorated-lamp {
   display: none;
 }
 
@@ -36,11 +36,11 @@
     background-image: url(../images/cover-image-light.png);
   }
 
-  .decorated-span {
+  .decorated-lamp::before {
     color: transparent;
   }
 
-  .decorated-span::after {
+  .decorated-lamp::after {
     background-color: transparent;
     box-shadow: 0 0 4px 2px transparent;
   }

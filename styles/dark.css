@@ -14,11 +14,11 @@
   background-image: url(../images/cover-image-dark.png);
 }
 
-.theme_dark .decorated-span {
+.theme_dark .decorated-lamp::before {
   color: var(--decor-color);
 }
 
-.theme_dark .decorated-span::after {
+.theme_dark .decorated-lamp::after {
   background-color: var(--decor-color);
   box-shadow: 0 0 4px 2px var(--decor-color);
 }

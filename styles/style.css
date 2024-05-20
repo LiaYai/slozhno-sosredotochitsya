@@ -18,19 +18,24 @@
   padding: min(2.67vw, 20px);
 }
 
-.decorated-span {
+.decorated-lamp {
   position: absolute;
-  right: calc(min(2.67vw, 20px) + 28px);
+  right: calc(min(2.67vw, 20px) + 9px);
   top: min(2.67vw, 20px);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.decorated-lamp::before {
+  content: 'REC';
   line-height: calc(25 / 18);
-  text-transform: uppercase;
   color: var(--decor-color);
 }
 
-.decorated-span::after {
-  position: absolute;
-  top: 8px;
-  right: -19px;
+.decorated-lamp::after {
   content: '';
   inline-size: 9px;
   block-size: 9px;
