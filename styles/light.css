@@ -1,4 +1,4 @@
-:root.theme-light {
+:root .theme_light {
   --bg-color: #fff1f7;
   --title-color: #ffc2e6;
   --text-color: #353430;
@@ -37,7 +37,6 @@
   }
 
   .decorated-span {
-    visibility: hidden;
     color: transparent;
   }
 
